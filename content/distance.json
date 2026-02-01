@@ -1,0 +1,13 @@
+{
+    "yourCity": {
+        "name": "Shimla",
+        "country": "India"
+    },
+    "herCity": {
+        "name": "Chandigarh",
+        "country": "India"
+    },
+    "distanceKm": 109,
+    "nextMeeting": null,
+    "message": "Every kilometer is just proof we're worth it."
+}

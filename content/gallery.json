@@ -1,0 +1,38 @@
+[
+    {
+        "id": 1,
+        "src": "/images/placeholder-1.jpg",
+        "caption": "Replace this with your first photo together. Add a heartfelt caption that makes her smile.",
+        "alt": "Memory photo 1"
+    },
+    {
+        "id": 2,
+        "src": "/images/placeholder-2.jpg",
+        "caption": "Another beautiful memory. What were you thinking in this moment?",
+        "alt": "Memory photo 2"
+    },
+    {
+        "id": 3,
+        "src": "/images/placeholder-3.jpg",
+        "caption": "Even miles away, you still feel like home.",
+        "alt": "Memory photo 3"
+    },
+    {
+        "id": 4,
+        "src": "/images/placeholder-4.jpg",
+        "caption": "This moment... I replay it in my mind all the time.",
+        "alt": "Memory photo 4"
+    },
+    {
+        "id": 5,
+        "src": "/images/placeholder-5.jpg",
+        "caption": "Your smile is my favorite view in the entire world.",
+        "alt": "Memory photo 5"
+    },
+    {
+        "id": 6,
+        "src": "/images/placeholder-6.jpg",
+        "caption": "I can't wait to make more memories like this with you.",
+        "alt": "Memory photo 6"
+    }
+]

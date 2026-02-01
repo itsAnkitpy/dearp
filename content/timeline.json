@@ -1,0 +1,37 @@
+[
+    {
+        "id": 1,
+        "date": "October 2023",
+        "title": "The Beginning",
+        "description": "This is where our story starts. The moment I first saw you, something just clicked. Replace this with your real story!",
+        "image": null
+    },
+    {
+        "id": 2,
+        "date": "November 2023",
+        "title": "First Conversation",
+        "description": "Our first real conversation. I could have talked to you for hours. Add your own memory here.",
+        "image": null
+    },
+    {
+        "id": 3,
+        "date": "December 2023",
+        "title": "When I Knew",
+        "description": "This is when I knew it was you. That feeling when your name popped up on my phone... pure happiness.",
+        "image": null
+    },
+    {
+        "id": 4,
+        "date": "January 2024",
+        "title": "Distance Began",
+        "description": "When the distance started. Every kilometer has been worth it, because it's you on the other side.",
+        "image": null
+    },
+    {
+        "id": 5,
+        "date": "February 2024",
+        "title": "First Valentine's Together",
+        "description": "Our first Valentine's Day. Even if we were miles apart, my heart was with you every second.",
+        "image": null
+    }
+]

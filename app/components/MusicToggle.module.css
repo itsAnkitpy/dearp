@@ -1,0 +1,107 @@
+.container {
+    position: fixed;
+    bottom: var(--space-6);
+    right: var(--space-6);
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    gap: var(--space-3);
+}
+
+.hint {
+    background: var(--bg-card);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-full);
+    padding: var(--space-2) var(--space-4);
+    font-size: var(--text-sm);
+    color: var(--text-secondary);
+    white-space: nowrap;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.button {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    border: none;
+    background: var(--bg-card);
+    border: 1px solid var(--border-subtle);
+    color: var(--text-secondary);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+}
+
+.button:hover {
+    color: var(--accent-pink);
+    border-color: var(--accent-pink);
+}
+
+.button.playing {
+    color: var(--accent-pink);
+    border-color: var(--accent-pink);
+    box-shadow: 0 0 20px rgba(255, 107, 157, 0.3);
+}
+
+/* Animated sound waves */
+.waves {
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 2px;
+    height: 12px;
+    align-items: flex-end;
+}
+
+.waves span {
+    width: 3px;
+    background: var(--accent-pink);
+    border-radius: 2px;
+    animation: wave 0.5s ease-in-out infinite;
+}
+
+.waves span:nth-child(1) {
+    height: 4px;
+    animation-delay: 0s;
+}
+
+.waves span:nth-child(2) {
+    height: 8px;
+    animation-delay: 0.1s;
+}
+
+.waves span:nth-child(3) {
+    height: 4px;
+    animation-delay: 0.2s;
+}
+
+@keyframes wave {
+
+    0%,
+    100% {
+        transform: scaleY(1);
+    }
+
+    50% {
+        transform: scaleY(1.5);
+    }
+}
+
+/* Adjust position on mobile */
+@media (max-width: 768px) {
+    .container {
+        bottom: var(--space-4);
+        right: var(--space-4);
+    }
+
+    .button {
+        width: 44px;
+        height: 44px;
+    }
+}

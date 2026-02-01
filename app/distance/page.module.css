@@ -1,0 +1,196 @@
+.page {
+    min-height: 100vh;
+    background: var(--bg-primary);
+    padding-top: calc(65px + var(--space-12));
+    padding-bottom: var(--space-16);
+}
+
+.header {
+    text-align: center;
+    margin-bottom: var(--space-12);
+    padding: 0 var(--space-4);
+}
+
+.header h1 {
+    font-size: var(--text-4xl);
+    color: var(--accent-pink);
+    margin-bottom: var(--space-2);
+}
+
+.header p {
+    font-family: var(--font-handwritten), cursive;
+    font-size: var(--text-xl);
+    color: var(--text-muted);
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+/* Map Container */
+.mapContainer {
+    max-width: 800px;
+    margin: 0 auto var(--space-12);
+    padding: 0 var(--space-4);
+}
+
+.map {
+    position: relative;
+    background: var(--bg-card);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-xl);
+    height: 300px;
+    overflow: hidden;
+}
+
+/* Subtle grid pattern */
+.map::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image:
+        linear-gradient(var(--border-subtle) 1px, transparent 1px),
+        linear-gradient(90deg, var(--border-subtle) 1px, transparent 1px);
+    background-size: 40px 40px;
+    opacity: 0.3;
+}
+
+.city {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-1);
+    z-index: 10;
+}
+
+.pin {
+    position: relative;
+    color: var(--accent-pink);
+    filter: drop-shadow(0 0 10px rgba(255, 107, 157, 0.5));
+}
+
+.pinHeart {
+    position: absolute;
+    top: 6px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+}
+
+.cityName {
+    font-size: var(--text-sm);
+    color: var(--text-primary);
+    font-weight: var(--font-semibold);
+    background: var(--bg-primary);
+    padding: var(--space-1) var(--space-2);
+    border-radius: var(--radius-sm);
+}
+
+.cityLabel {
+    font-size: var(--text-xs);
+    color: var(--accent-purple);
+    font-family: var(--font-handwritten), cursive;
+}
+
+.connection {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 5;
+}
+
+.airplane {
+    position: absolute;
+    color: var(--accent-gold);
+    z-index: 6;
+    transform: rotate(45deg);
+}
+
+/* Distance Display */
+.distanceDisplay {
+    text-align: center;
+    margin-bottom: var(--space-12);
+}
+
+.distanceNumber {
+    display: block;
+    font-family: var(--font-display), serif;
+    font-size: var(--text-5xl);
+    font-weight: var(--font-bold);
+    color: var(--accent-pink);
+    text-shadow: 0 0 30px rgba(255, 107, 157, 0.3);
+}
+
+@media (min-width: 768px) {
+    .distanceNumber {
+        font-size: 6rem;
+    }
+}
+
+.distanceUnit {
+    display: block;
+    font-size: var(--text-xl);
+    color: var(--text-secondary);
+    margin-bottom: var(--space-4);
+}
+
+.distanceHeart {
+    color: var(--accent-pink);
+    margin: var(--space-2) 0;
+}
+
+.distanceSub {
+    display: block;
+    font-family: var(--font-handwritten), cursive;
+    font-size: var(--text-lg);
+    color: var(--text-muted);
+}
+
+/* Countdown Timer */
+.countdown {
+    max-width: 500px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 0 var(--space-4);
+}
+
+.countdown h3 {
+    font-size: var(--text-xl);
+    color: var(--text-secondary);
+    margin-bottom: var(--space-6);
+}
+
+.timerGrid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--space-4);
+}
+
+.timerItem {
+    background: var(--bg-card);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-lg);
+    padding: var(--space-4);
+}
+
+.timerNumber {
+    display: block;
+    font-family: var(--font-display), serif;
+    font-size: var(--text-3xl);
+    font-weight: var(--font-bold);
+    color: var(--accent-gold);
+}
+
+.timerLabel {
+    display: block;
+    font-size: var(--text-xs);
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+.noDate {
+    text-align: center;
+    color: var(--text-muted);
+    font-size: var(--text-sm);
+}

@@ -1,0 +1,109 @@
+.page {
+    min-height: 100vh;
+    background: var(--bg-primary);
+    padding-top: calc(65px + var(--space-12));
+    padding-bottom: var(--space-16);
+}
+
+.header {
+    text-align: center;
+    margin-bottom: var(--space-12);
+    padding: 0 var(--space-4);
+}
+
+.header h1 {
+    font-size: var(--text-4xl);
+    color: var(--accent-pink);
+    margin-bottom: var(--space-2);
+}
+
+.header p {
+    font-family: var(--font-handwritten), cursive;
+    font-size: var(--text-xl);
+    color: var(--text-muted);
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: var(--space-6);
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 var(--space-4);
+}
+
+.card {
+    position: relative;
+    background: var(--bg-card);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-lg);
+    padding: var(--space-1);
+    cursor: default;
+    transform-origin: center;
+}
+
+.cardInner {
+    background: linear-gradient(135deg, #fef9f3 0%, #fdf6ed 100%);
+    border-radius: calc(var(--radius-lg) - 4px);
+    padding: var(--space-6);
+    position: relative;
+    min-height: 120px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.number {
+    position: absolute;
+    top: var(--space-3);
+    left: var(--space-4);
+    font-size: var(--text-sm);
+    color: var(--accent-pink);
+    font-weight: var(--font-bold);
+    opacity: 0.6;
+}
+
+.text {
+    font-family: var(--font-handwritten), cursive;
+    font-size: var(--text-lg);
+    color: #333;
+    line-height: 1.6;
+    text-align: center;
+    padding-top: var(--space-4);
+}
+
+.heart {
+    position: absolute;
+    bottom: var(--space-3);
+    right: var(--space-4);
+    color: var(--accent-pink);
+    opacity: 0.6;
+}
+
+.more {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-3);
+    margin-top: var(--space-16);
+    color: var(--accent-pink);
+}
+
+.more p {
+    font-family: var(--font-handwritten), cursive;
+    font-size: var(--text-xl);
+    color: var(--text-muted);
+}
+
+/* Slight rotation variations for playfulness */
+.card:nth-child(odd) {
+    transform: rotate(-1deg);
+}
+
+.card:nth-child(even) {
+    transform: rotate(1deg);
+}
+
+.card:nth-child(3n) {
+    transform: rotate(0.5deg);
+}

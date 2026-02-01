@@ -1,0 +1,109 @@
+.nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: var(--space-4) var(--space-6);
+    background: rgba(13, 13, 13, 0.8);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--border-subtle);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+    font-family: var(--font-display), serif;
+    font-size: var(--text-xl);
+    font-weight: var(--font-bold);
+    color: var(--accent-pink);
+    text-decoration: none;
+}
+
+.logo:hover {
+    color: var(--accent-pink-soft);
+}
+
+.links {
+    display: none;
+    align-items: center;
+    gap: var(--space-6);
+}
+
+@media (min-width: 768px) {
+    .links {
+        display: flex;
+    }
+}
+
+.link {
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+    color: var(--text-secondary);
+    font-size: var(--text-sm);
+    text-decoration: none;
+    transition: color var(--duration-fast) var(--ease-default);
+}
+
+.link:hover {
+    color: var(--accent-pink);
+}
+
+.link.active {
+    color: var(--accent-pink);
+}
+
+.menuButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: var(--space-2);
+    background: transparent;
+    border: none;
+    color: var(--text-primary);
+    cursor: pointer;
+}
+
+@media (min-width: 768px) {
+    .menuButton {
+        display: none;
+    }
+}
+
+.mobileMenu {
+    position: fixed;
+    top: 65px;
+    left: 0;
+    right: 0;
+    z-index: 99;
+    background: var(--bg-primary);
+    border-bottom: 1px solid var(--border-subtle);
+    padding: var(--space-4);
+}
+
+.mobileLink {
+    display: flex;
+    align-items: center;
+    gap: var(--space-3);
+    padding: var(--space-4);
+    color: var(--text-secondary);
+    font-size: var(--text-lg);
+    text-decoration: none;
+    border-radius: var(--radius-md);
+    transition: all var(--duration-fast) var(--ease-default);
+}
+
+.mobileLink:hover {
+    background: var(--bg-card);
+    color: var(--accent-pink);
+}
+
+.mobileLink.active {
+    background: var(--bg-card);
+    color: var(--accent-pink);
+}

@@ -1,0 +1,118 @@
+.hero {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: var(--gradient-hero);
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+  padding: var(--space-8);
+}
+
+.content {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-6);
+}
+
+.sparkle {
+  color: var(--accent-gold);
+  margin-bottom: var(--space-4);
+}
+
+.quote {
+  font-family: var(--font-handwritten), cursive;
+  font-size: var(--text-xl);
+  color: var(--text-secondary);
+  max-width: 400px;
+}
+
+@media (min-width: 768px) {
+  .quote {
+    font-size: var(--text-2xl);
+  }
+}
+
+.name {
+  font-size: var(--text-5xl);
+  color: var(--accent-pink);
+  text-shadow:
+    0 0 30px rgba(255, 107, 157, 0.5),
+    0 0 60px rgba(255, 107, 157, 0.3),
+    0 0 90px rgba(255, 107, 157, 0.2);
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+}
+
+@media (min-width: 768px) {
+  .name {
+    font-size: 5rem;
+  }
+}
+
+.heart {
+  color: var(--accent-pink);
+  display: inline-flex;
+}
+
+.subtitle {
+  font-size: var(--text-lg);
+  color: var(--text-muted);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.cta {
+  margin-top: var(--space-8);
+  padding: var(--space-4) var(--space-8);
+  font-size: var(--text-lg);
+}
+
+.scrollIndicator {
+  position: absolute;
+  bottom: var(--space-8);
+  left: 50%;
+  transform: translateX(-50%);
+  color: var(--text-muted);
+  font-size: var(--text-sm);
+}
+
+/* Decorative gradient orbs */
+.orb1 {
+  position: absolute;
+  top: 20%;
+  left: 10%;
+  width: 300px;
+  height: 300px;
+  background: radial-gradient(circle, rgba(255, 107, 157, 0.15) 0%, transparent 70%);
+  border-radius: 50%;
+  filter: blur(40px);
+  pointer-events: none;
+}
+
+.orb2 {
+  position: absolute;
+  bottom: 20%;
+  right: 10%;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(168, 85, 247, 0.1) 0%, transparent 70%);
+  border-radius: 50%;
+  filter: blur(60px);
+  pointer-events: none;
+}
+
+@media (max-width: 768px) {
+
+  .orb1,
+  .orb2 {
+    width: 200px;
+    height: 200px;
+  }
+}
