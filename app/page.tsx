@@ -64,23 +64,13 @@ export default function Home() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 1.2 }}
         >
-          <Link href="/timeline" className={`btn btn-primary ${styles.cta}`}>
-            <Heart size={20} />
-            Enter Our World
+          <Link href="/timeline" className={styles.ctaButton}>
+            <span className={styles.ctaMain}>
+              <Heart size={20} />
+              Enter Our World
+            </span>
+            <span className={styles.ctaSub}>Click to begin</span>
           </Link>
-        </motion.div>
-
-        {/* Scroll indicator */}
-        <motion.div
-          className={styles.scrollIndicator}
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1, y: [0, 10, 0] }}
-          transition={{
-            opacity: { delay: 2 },
-            y: { duration: 2, repeat: Infinity, ease: "easeInOut" }
-          }}
-        >
-          <span>Scroll or click to begin</span>
         </motion.div>
       </div>
 

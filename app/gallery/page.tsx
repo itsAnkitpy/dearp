@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Image as ImageIcon, X } from "lucide-react";
+import { X } from "lucide-react";
 import Navigation from "../components/Navigation";
 import galleryData from "../../content/gallery.json";
 import styles from "./page.module.css";
@@ -44,11 +44,12 @@ export default function GalleryPage() {
                             whileHover={{ scale: 1.02 }}
                             whileTap={{ scale: 0.98 }}
                         >
-                            {/* Placeholder for images - shows an icon when no real image */}
-                            <div className={styles.imagePlaceholder}>
-                                <ImageIcon size={48} />
-                                <span>Add Photo</span>
-                            </div>
+                            {/* eslint-disable-next-line @next/next/no-img-element */}
+                            <img
+                                src={item.src}
+                                alt={item.alt}
+                                className={styles.image}
+                            />
 
                             <div className={styles.overlay}>
                                 <p className={styles.caption}>{item.caption}</p>
@@ -82,10 +83,12 @@ export default function GalleryPage() {
                                 exit={{ scale: 0.9, y: 20 }}
                                 onClick={(e) => e.stopPropagation()}
                             >
-                                <div className={styles.lightboxImagePlaceholder}>
-                                    <ImageIcon size={64} />
-                                    <span>Your photo will appear here</span>
-                                </div>
+                                {/* eslint-disable-next-line @next/next/no-img-element */}
+                                <img
+                                    src={selectedImage.src}
+                                    alt={selectedImage.alt}
+                                    className={styles.lightboxImage}
+                                />
                                 <p className={styles.lightboxCaption}>{selectedImage.caption}</p>
                             </motion.div>
                         </motion.div>

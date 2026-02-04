@@ -1,38 +1,68 @@
 [
     {
         "id": 1,
-        "src": "/images/placeholder-1.jpg",
-        "caption": "Replace this with your first photo together. Add a heartfelt caption that makes her smile.",
+        "src": "/images/1.jpeg",
+        "caption": "The most beautiful moment and the best memory as our first date",
         "alt": "Memory photo 1"
     },
     {
         "id": 2,
-        "src": "/images/placeholder-2.jpg",
-        "caption": "Another beautiful memory. What were you thinking in this moment?",
+        "src": "/images/2.jpeg",
+        "caption": "Honey Hut, but she is sweeter than the honey",
         "alt": "Memory photo 2"
     },
     {
         "id": 3,
-        "src": "/images/placeholder-3.jpg",
-        "caption": "Even miles away, you still feel like home.",
+        "src": "/images/3.jpeg",
+        "caption": "The perfect couple.",
         "alt": "Memory photo 3"
     },
     {
         "id": 4,
-        "src": "/images/placeholder-4.jpg",
-        "caption": "This moment... I replay it in my mind all the time.",
+        "src": "/images/4.jpeg",
+        "caption": "The showstoppers are in town.",
         "alt": "Memory photo 4"
     },
     {
         "id": 5,
-        "src": "/images/placeholder-5.jpg",
-        "caption": "Your smile is my favorite view in the entire world.",
+        "src": "/images/5.jpeg",
+        "caption": "We went on a photo clicking spree here.",
         "alt": "Memory photo 5"
     },
     {
         "id": 6,
-        "src": "/images/placeholder-6.jpg",
-        "caption": "I can't wait to make more memories like this with you.",
+        "src": "/images/6.jpeg",
+        "caption": "Lord Hanuman with my baal hanuman.",
         "alt": "Memory photo 6"
+    },
+    {
+        "id": 7,
+        "src": "/images/7.jpeg",
+        "caption": "Durga Puja vibes and wifey vibes.",
+        "alt": "Memory photo 7"
+    },
+    {
+        "id": 8,
+        "src": "/images/8.jpeg",
+        "caption": "Cuties of IMTech",
+        "alt": "Memory photo 8"
+    },
+    {
+        "id": 9,
+        "src": "/images/9.jpeg",
+        "caption": "I can't wait to make more memories like this with you.",
+        "alt": "Memory photo 9"
+    },
+    {
+        "id": 10,
+        "src": "/images/10.jpeg",
+        "caption": "Biryani and my girl.",
+        "alt": "Memory photo 10"
+    },
+    {
+        "id": 11,
+        "src": "/images/11.jpeg",
+        "caption": "The scientist and his muse.",
+        "alt": "Memory photo 11"
     }
 ]
