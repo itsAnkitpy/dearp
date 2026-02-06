@@ -1,37 +1,37 @@
 [
     {
         "id": 1,
-        "date": "October 2023",
+        "date": "1st Arpil 2024",
         "title": "The Beginning",
-        "description": "This is where our story starts. The moment I first saw you, something just clicked. Replace this with your real story!",
+        "description": "This is where our story starts. The moment I first saw you, something just clicked - all thanks to the ICE CREAM!",
         "image": null
     },
     {
         "id": 2,
-        "date": "November 2023",
+        "date": "9th April 2024",
         "title": "First Conversation",
-        "description": "Our first real conversation. I could have talked to you for hours. Add your own memory here.",
+        "description": "Our first real conversation through voice call.I was really nervous and so were you but I could have talked to you for hours.",
         "image": null
     },
     {
         "id": 3,
-        "date": "December 2023",
-        "title": "When I Knew",
-        "description": "This is when I knew it was you. That feeling when your name popped up on my phone... pure happiness.",
+        "date": "May 2024",
+        "title": "When I came to meet you",
+        "description": "I was enchanted when I first saw you. You know I had to look twice. Even the place seemed to be chosen by gods for us to meet each other in front of them.",
         "image": null
     },
     {
         "id": 4,
-        "date": "January 2024",
-        "title": "Distance Began",
-        "description": "When the distance started. Every kilometer has been worth it, because it's you on the other side.",
+        "date": "October 2024",
+        "title": "Durga Pooja and your birthday",
+        "description": "The feeling of having a wife took over me that day. I was so happy to have you by my side. Doing things together and sharing our joys and sorrows has been the best part of my life.",
         "image": null
     },
     {
         "id": 5,
-        "date": "February 2024",
-        "title": "First Valentine's Together",
-        "description": "Our first Valentine's Day. Even if we were miles apart, my heart was with you every second.",
+        "date": "December 2024",
+        "title": "First Christmas Together",
+        "description": "Our first Christmas. Even if we were miles apart, my heart was with you every second.",
         "image": null
     }
 ]

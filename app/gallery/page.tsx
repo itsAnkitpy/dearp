@@ -101,7 +101,6 @@ export default function GalleryPage() {
                     animate={{ opacity: 1 }}
                     transition={{ delay: 1 }}
                 >
-                    💝 Replace placeholders with your actual photos in /public/images
                 </motion.p>
             </main>
         </>

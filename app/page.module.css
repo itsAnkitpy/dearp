@@ -142,3 +142,113 @@
     height: 200px;
   }
 }
+
+/* Password Modal Styles */
+.modalOverlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(8px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+  padding: var(--space-4);
+}
+
+.modal {
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-xl);
+  padding: var(--space-8);
+  max-width: 400px;
+  width: 100%;
+  text-align: center;
+}
+
+.modalIcon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 80px;
+  height: 80px;
+  background: linear-gradient(135deg, var(--accent-pink) 0%, var(--accent-purple) 100%);
+  border-radius: 50%;
+  color: white;
+  margin-bottom: var(--space-6);
+}
+
+.modalTitle {
+  font-size: var(--text-2xl);
+  color: var(--text-primary);
+  margin-bottom: var(--space-2);
+}
+
+.modalSubtitle {
+  font-family: var(--font-handwritten), cursive;
+  font-size: var(--text-lg);
+  color: var(--text-muted);
+  margin-bottom: var(--space-6);
+}
+
+.modalForm {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.modalInput {
+  width: 100%;
+  padding: var(--space-4);
+  background: var(--bg-primary);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  font-size: var(--text-base);
+  color: var(--text-primary);
+  text-align: center;
+  transition: all var(--duration-base) var(--ease-default);
+}
+
+.modalInput:focus {
+  outline: none;
+  border-color: var(--accent-pink);
+  box-shadow: 0 0 0 3px rgba(255, 107, 157, 0.2);
+}
+
+.modalInput::placeholder {
+  color: var(--text-muted);
+}
+
+.modalError {
+  color: var(--accent-pink);
+  font-family: var(--font-handwritten), cursive;
+  font-size: var(--text-base);
+}
+
+.modalButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  padding: var(--space-4) var(--space-6);
+  background: var(--accent-pink);
+  border: none;
+  border-radius: var(--radius-full);
+  font-size: var(--text-base);
+  font-weight: var(--font-semibold);
+  color: var(--bg-primary);
+  cursor: pointer;
+  transition: all var(--duration-base) var(--ease-default);
+}
+
+.modalButton:hover {
+  background: var(--accent-pink-soft);
+  box-shadow: var(--shadow-glow-pink);
+  transform: translateY(-2px);
+}
+
+.modalHint {
+  margin-top: var(--space-6);
+  font-size: var(--text-sm);
+  color: var(--text-muted);
+}
