@@ -197,9 +197,15 @@
   gap: var(--space-4);
 }
 
+.inputWrapper {
+  position: relative;
+  width: 100%;
+}
+
 .modalInput {
   width: 100%;
   padding: var(--space-4);
+  padding-right: var(--space-12);
   background: var(--bg-primary);
   border: 1px solid var(--border-subtle);
   border-radius: var(--radius-md);
@@ -217,6 +223,27 @@
 
 .modalInput::placeholder {
   color: var(--text-muted);
+}
+
+.eyeButton {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  padding: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: color var(--duration-base) var(--ease-default);
+  z-index: 10;
+}
+
+.eyeButton:hover {
+  color: var(--accent-pink);
 }
 
 .modalError {

@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
-import { Heart, Sparkles, Lock } from "lucide-react";
+import { Heart, Sparkles, Lock, Eye, EyeOff } from "lucide-react";
 import FloatingHearts from "./components/FloatingHearts";
 import styles from "./page.module.css";
 
@@ -14,6 +14,7 @@ export default function Home() {
   const router = useRouter();
   const [showPasswordModal, setShowPasswordModal] = useState(false);
   const [password, setPassword] = useState("");
+  const [showPassword, setShowPassword] = useState(false);
   const [error, setError] = useState("");
 
   // Check if already authenticated
@@ -136,14 +137,24 @@ export default function Home() {
               <p className={styles.modalSubtitle}>Enter the secret password, my love 💝</p>
               
               <form onSubmit={handleSubmit} className={styles.modalForm}>
-                <input
-                  type="password"
-                  value={password}
-                  onChange={(e) => setPassword(e.target.value)}
-                  placeholder="Our special date..."
-                  className={styles.modalInput}
-                  autoFocus
-                />
+                <div className={styles.inputWrapper}>
+                  <input
+                    type={showPassword ? "text" : "password"}
+                    value={password}
+                    onChange={(e) => setPassword(e.target.value)}
+                    placeholder="Our special date..."
+                    className={styles.modalInput}
+                    autoFocus
+                  />
+                  <button
+                    type="button"
+                    className={styles.eyeButton}
+                    onClick={() => setShowPassword(!showPassword)}
+                    aria-label={showPassword ? "Hide password" : "Show password"}
+                  >
+                    {showPassword ? <EyeOff size={20} /> : <Eye size={20} />}
+                  </button>
+                </div>
                 
                 <AnimatePresence>
                   {error && (
