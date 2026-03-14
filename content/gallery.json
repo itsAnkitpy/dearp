@@ -64,5 +64,59 @@
         "src": "/images/11.jpeg",
         "caption": "The scientist and his muse.",
         "alt": "Memory photo 11"
+    },
+    {
+        "id": 12,
+        "src": "/images/12.jpeg",
+        "caption": "The man, the myth, the legend. The CREATOR.",
+        "alt": "Memory photo 12"
+    },
+    {
+        "id": 13,
+        "src": "/images/13.jpeg",
+        "caption": "The ultimate homely date.",
+        "alt": "Memory photo 13"
+    },
+    {
+        "id": 14,
+        "src": "/images/14.jpeg",
+        "caption": "Looking into our happy future.",
+        "alt": "Memory photo 14"
+    },
+    {
+        "id": 15,
+        "src": "/images/15.jpeg",
+        "caption": "My sweetheart and I.",
+        "alt": "Memory photo 15"
+    },
+    {
+        "id": 16,
+        "src": "/images/16.jpeg",
+        "caption": "My Bae of Bengal.",
+        "alt": "Memory photo 16"
+    },
+    {
+        "id": 17,
+        "src": "/images/17.jpeg",
+        "caption": "SUNIDHI CHAUHAN WHO???.",
+        "alt": "Memory photo 17"
+    },
+    {
+        "id": 18,
+        "src": "/images/18.jpeg",
+        "caption": "Just one word - HOTTTTTT!!!!!!.",
+        "alt": "Memory photo 18"
+    },
+    {
+        "id": 19,
+        "src": "/images/19.jpeg",
+        "caption": "Ghar ka chota beta, with ghar ki badi beti.",
+        "alt": "Memory photo 19"
+    },
+    {
+        "id": 20,
+        "src": "/images/20.jpeg",
+        "caption": "Mera chutka.",
+        "alt": "Memory photo 20"
     }
 ]
