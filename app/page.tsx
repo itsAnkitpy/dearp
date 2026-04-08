@@ -112,6 +112,36 @@ export default function Home() {
       <div className={styles.orb1}></div>
       <div className={styles.orb2}></div>
 
+      {/* Left flower decoration */}
+      <div className={styles.flowersLeft}>
+        {["🌸", "🌺", "🌷", "🌸", "🌹", "🌺", "🌸"].map((flower, i) => (
+          <motion.span
+            key={i}
+            className={styles.flower}
+            style={{ animationDelay: `${i * 0.4}s` }}
+            animate={{ y: [0, -8, 0], rotate: [-5, 5, -5] }}
+            transition={{ duration: 3 + i * 0.3, repeat: Infinity, ease: "easeInOut", delay: i * 0.4 }}
+          >
+            {flower}
+          </motion.span>
+        ))}
+      </div>
+
+      {/* Right flower decoration */}
+      <div className={styles.flowersRight}>
+        {["🌺", "🌸", "🌹", "🌷", "🌸", "🌺", "🌷"].map((flower, i) => (
+          <motion.span
+            key={i}
+            className={styles.flower}
+            style={{ animationDelay: `${i * 0.35}s` }}
+            animate={{ y: [0, -8, 0], rotate: [5, -5, 5] }}
+            transition={{ duration: 3.5 + i * 0.25, repeat: Infinity, ease: "easeInOut", delay: i * 0.35 }}
+          >
+            {flower}
+          </motion.span>
+        ))}
+      </div>
+
       {/* Password Modal */}
       <AnimatePresence>
         {showPasswordModal && (
