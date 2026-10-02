@@ -1,0 +1,135 @@
+[
+    {
+        "question": "Which name do we call each other the most?",
+        "options": [
+            "Motu",
+            "Cutu",
+            "Gappu",
+            "Shona"
+        ],
+        "answer": 0,
+        "wrongReply": "Itna bhi nahi pata? Hint: you're one 😤",
+        "rightReply": "Motu it is! 1,183 times this year 🥰"
+    },
+    {
+        "question": "\"Gappu\" is short for what?",
+        "options": [
+            "Gappi",
+            "Golgappe",
+            "Gupta",
+            "Gappa"
+        ],
+        "answer": 1,
+        "wrongReply": "Nope! Think of something tasty 😋",
+        "rightReply": "Mera golgappe gappu 🧡"
+    },
+    {
+        "question": "Who says \"sorry\" more?",
+        "options": [
+            "Ankit",
+            "Priya",
+            "Exactly equal"
+        ],
+        "answer": 0,
+        "wrongReply": "Haha no, you're the dictator remember? 😂",
+        "rightReply": "Me, 46 times. The dictator rarely says sorry 😌"
+    },
+    {
+        "question": "Who sends more Myntra links?",
+        "options": [
+            "Ankit",
+            "Priya",
+            "Exactly equal"
+        ],
+        "answer": 1,
+        "wrongReply": "Arey, be honest now 🛍️",
+        "rightReply": "You, 69 links! Shopping queen 👑"
+    },
+    {
+        "question": "Who says \"Haanji\" more?",
+        "options": [
+            "Ankit",
+            "Priya",
+            "Exactly equal"
+        ],
+        "answer": 1,
+        "wrongReply": "Haanji? Nahi ji 😄",
+        "rightReply": "You, 157 times. Haanji madam 🙈"
+    },
+    {
+        "question": "Who texts first on most days?",
+        "options": [
+            "Ankit",
+            "Priya"
+        ],
+        "answer": 0,
+        "wrongReply": "Galat! Motu, focus 😤",
+        "rightReply": "Me, on 274 days. Can't help it 🥰"
+    },
+    {
+        "question": "Who says \"miss you\" more? (it's close!)",
+        "options": [
+            "Ankit",
+            "Priya"
+        ],
+        "answer": 1,
+        "wrongReply": "So close! But no 🙈",
+        "rightReply": "You, 16 vs my 13. You win this one 💕"
+    },
+    {
+        "question": "Who says \"sweet dreams\" more?",
+        "options": [
+            "Ankit",
+            "Priya"
+        ],
+        "answer": 0,
+        "wrongReply": "Try again, sleepyhead 😴",
+        "rightReply": "Me, 40 times. Sweet dreams always 🌙"
+    },
+    {
+        "question": "Who sends more photos and videos?",
+        "options": [
+            "Ankit",
+            "Priya"
+        ],
+        "answer": 0,
+        "wrongReply": "Nope, the photographer is someone else 📸",
+        "rightReply": "Me, 1,507 of them! 📸"
+    },
+    {
+        "question": "In January you listed trip ideas. Which one was NOT on your list?",
+        "options": [
+            "Bir",
+            "Palampur",
+            "Dharamshala",
+            "Manali"
+        ],
+        "answer": 3,
+        "wrongReply": "That one was on your list! 🗺️",
+        "rightReply": "Manali! You said Bir, Palampur, Dharamshala ⛰️"
+    },
+    {
+        "question": "Before Dharamshala, where were we worried there'd be too much snow?",
+        "options": [
+            "Bhagsu",
+            "Triund",
+            "Kareri Lake",
+            "Indrahar Pass"
+        ],
+        "answer": 1,
+        "wrongReply": "Brrr, wrong mountain 🥶",
+        "rightReply": "Triund! Baraf ki report 😅❄️"
+    },
+    {
+        "question": "What did I keep saying while \"stopping\" you from hearing the gossip outside in hotel Amar Palace Chandigarh?",
+        "options": [
+            "Chup raho",
+            "Sun na",
+            "Kya hora hai, kya hora hai!",
+            "Kuch nahi"
+        ],
+        "answer": 2,
+        "wrongReply": "Think harder... you laughed SO hard 😂",
+        "rightReply": "Kya hora hai, kya hora hai! 😂"
+    }
+]

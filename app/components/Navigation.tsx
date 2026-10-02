@@ -4,7 +4,7 @@ import { useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
-import { Heart, Menu, X, Home, BookOpen, Image, Mail, Sparkles, Star, MapPin } from "lucide-react";
+import { Heart, Menu, X, Home, BookOpen, Image, Mail, Sparkles, Star, MapPin, Cake } from "lucide-react";
 import styles from "./Navigation.module.css";
 
 const navItems = [
@@ -15,6 +15,7 @@ const navItems = [
     { href: "/loves", label: "I Love You", icon: Star },
     { href: "/distance", label: "Distance", icon: MapPin },
     { href: "/valentine", label: "Valentine's", icon: Sparkles },
+    { href: "/birthday", label: "Birthday", icon: Cake },
 ];
 
 export default function Navigation() {

@@ -1,11 +1,14 @@
 "use client";
 
 import { useState } from "react";
+import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 import { Mail, Heart, X } from "lucide-react";
 import Navigation from "../components/Navigation";
 import lettersData from "../../content/letters.json";
 import styles from "./page.module.css";
+
+const MotionLink = motion.create(Link);
 
 export default function LettersPage() {
     const [openLetter, setOpenLetter] = useState<typeof lettersData[0] | null>(null);
@@ -53,6 +56,26 @@ export default function LettersPage() {
                             <p className={styles.label}>{letter.label}</p>
                         </motion.button>
                     ))}
+
+                    {/* Birthday letter lives on /birthday, which stays locked until 13 Oct */}
+                    <MotionLink
+                        href="/birthday"
+                        className={styles.envelope}
+                        style={{ "--accent": "#ffd700" } as React.CSSProperties}
+                        initial={{ opacity: 0, y: 30 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.5, delay: lettersData.length * 0.1 }}
+                        whileHover={{ scale: 1.05, y: -5 }}
+                        whileTap={{ scale: 0.98 }}
+                    >
+                        <div className={styles.envelopeFlap}></div>
+                        <div className={styles.envelopeBody}>
+                            <Mail size={32} />
+                            <span className={styles.emoji}>🎂</span>
+                        </div>
+                        <p className={styles.label}>Open on your birthday</p>
+                    </MotionLink>
                 </div>
 
                 {/* Letter Modal */}

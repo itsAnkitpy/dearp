@@ -33,5 +33,12 @@
         "title": "First Christmas Together",
         "description": "Our first Christmas. Even if we were miles apart, my heart was with you every second.",
         "image": null
+    },
+    {
+        "id": 6,
+        "date": "13th October 2025",
+        "title": "One Year Later - Your Birthday",
+        "description": "Your birthday at Virgin Courtyard. A dinner date with candles and flowers, and you looking more beautiful than all of it. Seeing you smile across that table, I knew I wanted every birthday of yours to be with me.",
+        "image": null
     }
 ]

@@ -1,14 +1,22 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useSyncExternalStore } from "react";
 import { useRouter } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
 import { Heart, Sparkles, Lock, Eye, EyeOff } from "lucide-react";
 import FloatingHearts from "./components/FloatingHearts";
 import styles from "./page.module.css";
 
+// True on 13 Oct in India time, any year
+const isBirthdayToday = () =>
+  new Intl.DateTimeFormat("en-CA", { timeZone: "Asia/Kolkata", month: "2-digit", day: "2-digit" }).format(new Date()) === "10-13";
+const noSubscribe = () => () => {};
+
 export default function Home() {
   const router = useRouter();
+  // Server render always says false, the browser fills in the real value
+  const isBirthday = useSyncExternalStore(noSubscribe, isBirthdayToday, () => false);
+  const destination = isBirthday ? "/birthday" : "/timeline";
   const [showPasswordModal, setShowPasswordModal] = useState(false);
   const [password, setPassword] = useState("");
   const [showPassword, setShowPassword] = useState(false);
@@ -18,7 +26,7 @@ export default function Home() {
   const handleEnterClick = async () => {
     const res = await fetch("/api/auth");
     if (res.ok) {
-      router.push("/timeline");
+      router.push(destination);
     } else {
       setShowPasswordModal(true);
     }
@@ -33,7 +41,7 @@ export default function Home() {
     });
     if (res.ok) {
       setError("");
-      router.push("/timeline");
+      router.push(destination);
     } else {
       setError("Not quite, my love... Try again? 💕");
       setPassword("");
@@ -61,7 +69,7 @@ export default function Home() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
         >
-          To the girl who makes distance feel temporary...
+          {isBirthday ? "Today is all about you..." : "To the girl who makes distance feel temporary..."}
         </motion.p>
 
         {/* Her name */}
@@ -88,7 +96,7 @@ export default function Home() {
           animate={{ opacity: 1 }}
           transition={{ duration: 0.8, delay: 0.8 }}
         >
-          This is our little internet home
+          {isBirthday ? "Happy Birthday, my love" : "This is our little internet home"}
         </motion.p>
 
         {/* CTA Button */}
@@ -100,9 +108,9 @@ export default function Home() {
           <button onClick={handleEnterClick} className={styles.ctaButton}>
             <span className={styles.ctaMain}>
               <Heart size={20} />
-              Enter Our World
+              {isBirthday ? "Your Birthday Surprise" : "Enter Our World"}
             </span>
-            <span className={styles.ctaSub}>Click to begin</span>
+            <span className={styles.ctaSub}>{isBirthday ? "Open me" : "Click to begin"}</span>
           </button>
         </motion.div>
       </div>

@@ -1,0 +1,107 @@
+.quiz {
+    max-width: 520px;
+    width: 100%;
+    text-align: center;
+}
+
+.kicker {
+    font-family: var(--font-handwritten), cursive;
+    font-size: var(--text-lg);
+    color: var(--accent-gold);
+    margin-bottom: var(--space-4);
+}
+
+.dots {
+    display: flex;
+    justify-content: center;
+    gap: var(--space-2);
+    margin-bottom: var(--space-8);
+}
+
+.dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--border-subtle);
+    transition: all 0.3s ease;
+}
+
+.dotDone {
+    background: var(--accent-pink);
+}
+
+.dotNow {
+    background: var(--accent-gold);
+    transform: scale(1.4);
+}
+
+.question {
+    font-size: var(--text-2xl);
+    color: var(--text-primary);
+    line-height: var(--leading-tight);
+    margin-bottom: var(--space-8);
+    min-height: 2.4em;
+}
+
+.options {
+    display: grid;
+    gap: var(--space-3);
+    margin-bottom: var(--space-6);
+}
+
+.option {
+    padding: var(--space-4) var(--space-6);
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--border-accent);
+    background: var(--bg-card);
+    color: var(--text-primary);
+    font-size: var(--text-base);
+    cursor: pointer;
+    transition: background 0.2s ease, border-color 0.2s ease, opacity 0.2s ease;
+}
+
+.option:hover:not(:disabled) {
+    background: rgba(255, 107, 157, 0.12);
+}
+
+.option:disabled {
+    cursor: default;
+}
+
+.wrong {
+    opacity: 0.4;
+    border-color: var(--error);
+    text-decoration: line-through;
+}
+
+.right {
+    border-color: var(--success);
+    background: rgba(74, 222, 128, 0.15);
+    box-shadow: 0 0 20px rgba(74, 222, 128, 0.25);
+}
+
+.reply {
+    font-family: var(--font-handwritten), cursive;
+    font-size: var(--text-lg);
+    color: var(--accent-pink-soft);
+    margin-bottom: var(--space-6);
+    min-height: 1.5em;
+}
+
+.replyRight {
+    color: var(--success);
+}
+
+.result {
+    font-size: var(--text-5xl);
+    color: var(--accent-gold);
+    line-height: 1;
+}
+
+.resultLabel {
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-size: var(--text-xs);
+    margin: var(--space-2) 0 var(--space-6);
+}

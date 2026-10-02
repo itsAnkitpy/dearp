@@ -1,0 +1,132 @@
+/* Full screen, above the nav bar, like Instagram stories */
+.wrapped {
+    position: fixed;
+    inset: 0;
+    z-index: 900;
+    display: flex;
+    flex-direction: column;
+    color: #fff;
+    user-select: none;
+}
+
+.progress {
+    display: flex;
+    gap: 4px;
+    padding: var(--space-4) var(--space-4) 0;
+}
+
+.bar {
+    flex: 1;
+    height: 3px;
+    border-radius: 2px;
+    background: rgba(255, 255, 255, 0.25);
+    overflow: hidden;
+}
+
+.fill {
+    display: block;
+    height: 100%;
+    background: #fff;
+    transition: width 0.4s ease;
+}
+
+.tapArea {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: var(--space-6);
+    cursor: pointer;
+    touch-action: pan-y;
+}
+
+.slide {
+    max-width: 520px;
+    width: 100%;
+    text-align: center;
+}
+
+.kicker {
+    font-size: var(--text-sm);
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    opacity: 0.8;
+    margin-bottom: var(--space-4);
+}
+
+.big {
+    font-family: var(--font-display), serif;
+    font-size: clamp(3.5rem, 18vw, 6.5rem);
+    font-weight: var(--font-bold);
+    line-height: 1;
+    margin-bottom: var(--space-6);
+    text-shadow: 0 4px 30px rgba(0, 0, 0, 0.25);
+}
+
+.big small {
+    font-size: 0.4em;
+    opacity: 0.7;
+}
+
+.split {
+    display: flex;
+    justify-content: center;
+    gap: var(--space-10);
+}
+
+.split > span {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 0.75em;
+}
+
+.split small {
+    font-family: var(--font-body), sans-serif;
+    font-size: var(--text-sm);
+    font-weight: var(--font-normal);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-top: var(--space-2);
+}
+
+.emojis {
+    display: flex;
+    justify-content: center;
+    gap: var(--space-4);
+    font-size: 0.6em;
+}
+
+.emojis > span {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.emojis small {
+    font-family: var(--font-body), sans-serif;
+    font-size: var(--text-xs);
+    font-weight: var(--font-normal);
+    margin-top: var(--space-2);
+}
+
+.line {
+    font-size: var(--text-xl);
+    font-weight: var(--font-semibold);
+    margin-bottom: var(--space-3);
+}
+
+.sub {
+    font-family: var(--font-handwritten), cursive;
+    font-size: var(--text-lg);
+    opacity: 0.85;
+}
+
+.hint {
+    text-align: center;
+    font-size: var(--text-xs);
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    opacity: 0.6;
+    padding-bottom: var(--space-8);
+}

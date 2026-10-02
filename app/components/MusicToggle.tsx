@@ -19,8 +19,16 @@ export default function MusicToggle() {
         // Hide hint after 5 seconds
         const timer = setTimeout(() => setShowHint(false), 5000);
 
+        // Other parts of the site (mic, voice note) can ask the song to stop
+        const pause = () => {
+            audioRef.current?.pause();
+            setIsPlaying(false);
+        };
+        window.addEventListener("dearp:pause-music", pause);
+
         return () => {
             clearTimeout(timer);
+            window.removeEventListener("dearp:pause-music", pause);
             if (audioRef.current) {
                 audioRef.current.pause();
                 audioRef.current = null;

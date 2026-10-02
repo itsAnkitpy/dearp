@@ -1,0 +1,206 @@
+.page {
+    min-height: 100vh;
+    background: var(--gradient-hero);
+    padding: calc(65px + var(--space-12)) var(--space-4) var(--space-16);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.countdown,
+.finale {
+    max-width: 560px;
+    width: 100%;
+    text-align: center;
+}
+
+.countdown h1,
+.finale h1 {
+    font-size: var(--text-4xl);
+    color: var(--accent-pink);
+    margin-bottom: var(--space-2);
+}
+
+.subtitle {
+    font-family: var(--font-handwritten), cursive;
+    font-size: var(--text-xl);
+    color: var(--text-secondary);
+    margin-bottom: var(--space-8);
+}
+
+.cakeIcon {
+    display: inline-flex;
+    color: var(--accent-gold);
+    margin-bottom: var(--space-6);
+    filter: drop-shadow(var(--shadow-glow-gold));
+}
+
+.timerGrid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--space-3);
+}
+
+.timerItem {
+    background: var(--bg-card);
+    border: 1px solid var(--border-accent);
+    border-radius: var(--radius-lg);
+    padding: var(--space-4) var(--space-2);
+    box-shadow: var(--shadow-glow-pink);
+}
+
+.timerNumber {
+    display: block;
+    font-family: var(--font-display), serif;
+    font-size: var(--text-3xl);
+    font-weight: var(--font-bold);
+    color: var(--accent-gold);
+}
+
+.timerLabel {
+    display: block;
+    font-size: var(--text-xs);
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+.finaleHeart {
+    display: inline-flex;
+    color: var(--accent-pink);
+}
+
+.confetti {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 50;
+    overflow: hidden;
+    perspective: 600px;
+}
+
+.piece {
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    will-change: transform;
+}
+
+.ribbon {
+    width: 8px;
+    height: 18px;
+    border-radius: 2px;
+}
+
+.dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+}
+
+.heart {
+    filter: drop-shadow(0 0 6px currentColor);
+}
+
+.sparkle {
+    font-size: 18px;
+    line-height: 1;
+    text-shadow: 0 0 8px currentColor;
+}
+
+@media (max-width: 480px) {
+    .countdown h1,
+    .finale h1 {
+        font-size: var(--text-3xl);
+    }
+
+    .timerNumber {
+        font-size: var(--text-2xl);
+    }
+}
+
+.step {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.nextButton {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-2);
+    padding: var(--space-3) var(--space-8);
+    border: 1px solid var(--border-accent);
+    border-radius: var(--radius-full);
+    background: var(--bg-card);
+    color: var(--accent-pink);
+    font-size: var(--text-lg);
+    cursor: pointer;
+    box-shadow: var(--shadow-glow-pink);
+}
+
+.letterStep {
+    width: 100%;
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-8);
+    perspective: 1000px;
+}
+
+.voiceNote {
+    text-align: center;
+    margin-bottom: var(--space-6);
+    padding: var(--space-4);
+    border-radius: var(--radius-md);
+    background: rgba(255, 107, 157, 0.08);
+}
+
+.voiceNote p {
+    font-family: var(--font-handwritten), cursive;
+    color: #6b4a57;
+    margin-bottom: var(--space-2);
+}
+
+.voiceNote audio {
+    width: 100%;
+}
+
+.replayTitle {
+    margin-top: var(--space-10);
+    margin-bottom: var(--space-4);
+    font-size: var(--text-xs);
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: var(--text-muted);
+}
+
+.replays {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-3);
+}
+
+.replay {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-2);
+    padding: var(--space-3) var(--space-4);
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--border-accent);
+    background: var(--bg-card);
+    color: var(--text-secondary);
+    font-size: var(--text-sm);
+    cursor: pointer;
+    transition: color 0.2s ease, background 0.2s ease;
+}
+
+.replay:hover {
+    color: var(--accent-pink);
+    background: rgba(255, 107, 157, 0.12);
+}

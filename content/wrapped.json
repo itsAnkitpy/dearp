@@ -1,0 +1,49 @@
+{
+    "total": 12026,
+    "fromMe": 6813,
+    "fromHer": 5213,
+    "goodMorning": 161,
+    "goodNight": 191,
+    "loveYou": {
+        "me": 220,
+        "her": 178
+    },
+    "media": 2131,
+    "firstDay": "2025-09-01",
+    "lastDay": "2026-10-02",
+    "daysTalked": 390,
+    "busiestDay": {
+        "day": "2026-04-09",
+        "messages": 287
+    },
+    "longestStreakDays": 173,
+    "latestMessage": {
+        "day": "2025-10-19",
+        "time": "04:44"
+    },
+    "topEmojis": [
+        {
+            "emoji": "❤",
+            "count": 1553
+        },
+        {
+            "emoji": "😚",
+            "count": 1381
+        },
+        {
+            "emoji": "🥰",
+            "count": 843
+        },
+        {
+            "emoji": "😘",
+            "count": 410
+        },
+        {
+            "emoji": "🤣",
+            "count": 306
+        }
+    ],
+    "manual": {
+        "timesMet": 8
+    }
+}
