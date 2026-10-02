@@ -7,9 +7,6 @@ import { Heart, Sparkles, Lock, Eye, EyeOff } from "lucide-react";
 import FloatingHearts from "./components/FloatingHearts";
 import styles from "./page.module.css";
 
-const STORAGE_KEY = "dearp_authenticated";
-const CORRECT_PASSWORD = "01042024"; // Valentine's Day format - change this!
-
 export default function Home() {
   const router = useRouter();
   const [showPasswordModal, setShowPasswordModal] = useState(false);
@@ -17,22 +14,24 @@ export default function Home() {
   const [showPassword, setShowPassword] = useState(false);
   const [error, setError] = useState("");
 
-  // Check if already authenticated
-  const handleEnterClick = () => {
-    if (typeof window !== "undefined") {
-      const isAuthenticated = localStorage.getItem(STORAGE_KEY) === "true";
-      if (isAuthenticated) {
-        router.push("/timeline");
-      } else {
-        setShowPasswordModal(true);
-      }
+  // Skip the modal if the auth cookie is already valid
+  const handleEnterClick = async () => {
+    const res = await fetch("/api/auth");
+    if (res.ok) {
+      router.push("/timeline");
+    } else {
+      setShowPasswordModal(true);
     }
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (password === CORRECT_PASSWORD) {
-      localStorage.setItem(STORAGE_KEY, "true");
+    const res = await fetch("/api/auth", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ password }),
+    });
+    if (res.ok) {
       setError("");
       router.push("/timeline");
     } else {
