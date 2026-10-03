@@ -8,7 +8,7 @@ import styles from "./Cake.module.css";
 const CANDLES = 5;
 // Mic loudness (0–1) that counts as blowing. Phones differ: tune on her phone model.
 // ponytail: plain loudness check, add frequency analysis only if talking triggers it
-const BLOW_THRESHOLD = 0.12;
+const BLOW_THRESHOLD = 0.05;
 const BLOW_MS = 150; // must stay loud this long to count
 const GAP_MS = 400; // pause between candles so one breath doesn't clear the cake
 
