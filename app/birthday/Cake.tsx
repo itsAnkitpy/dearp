@@ -1,14 +1,14 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence, useMotionValue, useTransform } from "framer-motion";
 import { Wind } from "lucide-react";
 import styles from "./Cake.module.css";
 
 const CANDLES = 5;
 // Mic loudness (0–1) that counts as blowing. Phones differ: tune on her phone model.
 // ponytail: plain loudness check, add frequency analysis only if talking triggers it
-const BLOW_THRESHOLD = 0.15;
+const BLOW_THRESHOLD = 0.12;
 const BLOW_MS = 150; // must stay loud this long to count
 const GAP_MS = 400; // pause between candles so one breath doesn't clear the cake
 
@@ -17,6 +17,9 @@ export default function Cake({ onDone }: { onDone: () => void }) {
     const [listening, setListening] = useState(false);
     const [micFailed, setMicFailed] = useState(false);
     const stopRef = useRef<() => void>(() => {});
+    // Breath meter: updated every frame without re-rendering the cake
+    const level = useMotionValue(0);
+    const meterScale = useTransform(level, (l) => Math.min(l / (BLOW_THRESHOLD * 2), 1));
     const allOut = lit.every((l) => !l);
 
     // Stop the mic when unmounting
@@ -42,7 +45,10 @@ export default function Cake({ onDone }: { onDone: () => void }) {
         // iOS needs the AudioContext created inside the tap
         const ctx = new AudioContext();
         try {
-            const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
+            // Phones filter out "wind noise" for calls, which is exactly what blowing sounds like
+            const stream = await navigator.mediaDevices.getUserMedia({
+                audio: { echoCancellation: false, noiseSuppression: false, autoGainControl: false },
+            });
             await ctx.resume();
             window.dispatchEvent(new Event("dearp:pause-music"));
 
@@ -59,6 +65,7 @@ export default function Cake({ onDone }: { onDone: () => void }) {
                 let sum = 0;
                 for (const s of samples) sum += ((s - 128) / 128) ** 2;
                 const loudness = Math.sqrt(sum / samples.length);
+                level.set(loudness);
 
                 if (loudness > BLOW_THRESHOLD) {
                     loudSince ||= now;
@@ -142,6 +149,14 @@ export default function Cake({ onDone }: { onDone: () => void }) {
                 </div>
                 <div className={styles.plate} />
             </div>
+
+            {listening && !allOut && (
+                <div className={styles.meter} aria-hidden="true">
+                    <motion.div className={styles.meterFill} style={{ scaleX: meterScale }} />
+                    {/* Marker at the middle = loud enough to blow a candle out */}
+                    <span className={styles.meterMark} />
+                </div>
+            )}
 
             {!listening && !micFailed && !allOut && (
                 <motion.button
